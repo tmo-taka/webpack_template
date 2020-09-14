@@ -1,0 +1,11 @@
+{
+
+    "syntax": "scss",
+
+    "plugins": [
+        "stylelint-scss"
+    ],
+
+    "rules": {
+    }
+}

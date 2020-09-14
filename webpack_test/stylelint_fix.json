@@ -1,0 +1,12 @@
+{
+
+    "syntax": "scss",
+
+    "plugins": [
+        "stylelint-scss"
+    ],
+
+    "rules": {
+        "color-hex-case": "upper"
+    }
+}
