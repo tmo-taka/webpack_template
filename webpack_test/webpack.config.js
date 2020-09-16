@@ -1,9 +1,10 @@
 // プラグインを利用するためにwebpackを読み込んでおく
 const webpack = require('webpack');
-
 // output.pathに絶対パスを指定する必要があるため、pathモジュールを読み込んでおく
 const path = require('path');
+//エントリーポイントを配列で指定できるようになる
 const globby = require('globby');
+
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const fixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const optimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -62,6 +63,7 @@ module.exports = {
         //書き方がおかしい部分をstylelint側で勝手に修正
         new stylelintPlugin({
             configFile: './stylelint_fix.json',
+            //fixプロパティがポイント
             fix: true,
         })
     ],
