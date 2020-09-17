@@ -7,5 +7,16 @@
     ],
 
     "rules": {
-    }
+        "property-no-unknown": true,
+        "declaration-block-no-duplicate-properties": true,
+        "block-no-empty": true,
+        "comment-no-empty": true
+    },
+
+    "$comment": [
+        "property-no-unknown 不正なプロパティをとり締まる",
+        "declaration-block-no-duplicate-properties 重複プロパティを許さない",
+        "block-no-empty 空の指定を許さない",
+        "comment-no-empty　空コメントは消してください"
+    ]
 }
