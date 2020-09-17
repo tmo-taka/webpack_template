@@ -12,12 +12,13 @@ const stylelintPlugin = require('stylelint-webpack-plugin');
 
 // entrypointの記述
 /*
-今回ここでやっているのでは
+今回下記でやっていることは
 エントリーポイントとアウトプットファイルの登録をしています。
 楽せずに書こうとすれば
 {
-    entry: './src/js/entry.js',
-    index: './src/js/index.js'
+    './css/common.css': './src/scss/common.scss',
+    './css/reset.css': './src/scss/reset.scss'
+    ・・・
 },
  */
 const scssEntries = globby.sync(['./src/scss/**/*.scss']).reduce((acc, cur) => {
