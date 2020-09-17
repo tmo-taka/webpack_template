@@ -13,6 +13,6 @@
 
     "$comment": [
         "color-hex-case カラーコードは強制大文字",
-        "declaration-block-trailing-semicolon セミコロンは強制でつけます",
+        "declaration-block-trailing-semicolon セミコロンは強制でつけます"
     ]
 }
