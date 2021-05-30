@@ -23,9 +23,15 @@ const stylelintPlugin = require('stylelint-webpack-plugin');
  */
 const scssEntries = globby.sync(['./src/scss/**/*.scss']).reduce((acc, cur) => {
     const src = cur;
-    const distPath = cur.replace('./src/scss/','./css/').replace('.scss','.css');
-    acc[distPath] = src;
-    return acc;
+    const filename = src.split("/").reverse()[0].split('.')[0];
+    if(!filename.startsWith("_")){
+        //fileがmixin形式でない場合
+        const distPath = cur.replace('./src/scss/','./css/').replace('.scss','.css');
+        acc[distPath] = src;
+        return acc;
+    }else {
+        return acc;
+    }
 },{});
 
 console.log(scssEntries);
